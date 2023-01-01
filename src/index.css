@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:rgb(169, 169, 169);
+  font-weight: 700;
+  
+
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.con img{
+  width: 200px;
+}
+.con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: fit-content; */
+  /* width: 250px; */
+  height: fit-content;
+  width: auto;
+  margin: 10px 3px;
+}
+.btn{
+  border: 2px solid black;
+  margin-right: 5px;
+}
+.mytitle{
+  overflow: hidden;
+  width: 180px;
+  color: black;
+  text-decoration: none;
+  
+}
+.hdldata a{
+  text-decoration: none;
+}
+.nw{
+  width: 200px;
+  height: 1500px;
+  
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.All-Icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon{
+  color: orange;
+  height: 40px;
+  /* margin: 0px  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.con img{
+  border-radius: 10px;
+}
+.App{
+  display: flex;
+}
+/* .sider img{
+margin-left: 3px;
+} */
+
+.ourlist{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.sider{
+width: fit-content;
+/* margin: 3px 5x; */
+}
+.bgc{
+  background-color: rgb(190, 187, 187);
+  border-radius: 20px;
+  height: 1536px;
+}
+
+.myanchor{
+  width: 100%;
+  
+
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  
+}
+.myanchor li{
+font-size: 1.25rem;
+font-weight: lighter;
+list-style: none;
+}
+.myanchor :hover{
+  background-color: rgb(167, 166, 166);
+}
+.mimg{
+  display: inline-block;
+  min-width: 50px;
+}
+
+
+
+
+.df{
+  display: flex;
+  margin-bottom: 15px;
+  padding: 4px 10px;
+}
+.br{
+  width: auto;
+  height: 2px;
+  background-color: grey;
+}
+.spec{
+  color: white;
+  width: fit-content;
+  display: block;
+  /* margin-top: 5px; */
+ margin: auto;
+  font-size: 1.5rem
+}
+.parpota{
+  width: 100%;
+  height: 80%;
+  display: block;
+  margin: auto;
+  border: 2px solid red;
+}
