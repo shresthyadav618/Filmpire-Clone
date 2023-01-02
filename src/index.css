@@ -6,9 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  background: linear-gradient(rgba(34, 34, 34, 0.96), rgba(34, 34, 34, 0.96)),
-    /* bottom, image */ url('blank.jpeg');
-
+  background-color: rgb(37, 36, 36);
   color: white;
 }
 
