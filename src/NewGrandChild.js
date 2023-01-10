@@ -4,6 +4,7 @@ import Star from "./Star"
 import a2f from "./a2f.jpeg"
 import ParPota from "./ParPota"
 import firestore from "./firestore"
+import "firebase/firestore"
 import { getDocs , collection , deleteDoc, query , where, doc } from "firebase/firestore"
 import "./index.css"
 
