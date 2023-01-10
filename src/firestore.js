@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import firebase from 'firebase/compat/app'
 import "firebase/app"
 import "firebase/firestore"
 import { initializeApp } from "firebase/app";
