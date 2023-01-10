@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "./movielogo.jpeg";
-
+import firebase from 'firebase/compat/app'
 import "./index.css";
 import advent from "./advent.png";
 import firestore from "./firestore"
