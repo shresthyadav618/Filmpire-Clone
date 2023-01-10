@@ -4,6 +4,7 @@ import logo from "./movielogo.jpeg";
 import "./index.css";
 import advent from "./advent.png";
 import firestore from "./firestore"
+import "firebase/firestore"
 import { getDocs,onSnapshot,collection } from "firebase/firestore";
 import animation from "./animation.png";
 import comedy from "./comedy.png";
