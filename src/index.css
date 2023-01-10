@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  background-color: rgb(37, 36, 36);
+  /* background: linear-gradient(rgba(34, 34, 34, 0.96), rgba(34, 34, 34, 0.96)),
+     url('blank.jpeg'); */
+background-color: rgb(37, 36, 36);
   color: white;
 }
 
@@ -15,7 +17,17 @@ code {
     monospace;
 }
 .con img {
-  width: 200px;
+  /* width: 200px; */
+}
+/* .add2f:hover{
+  display: block;
+} */
+.add2f{
+  justify-content: center;
+  align-content: center;
+}
+.addsave{
+  background-color: black;
 }
 .con {
   display: flex;
@@ -109,7 +121,15 @@ code {
   display: inline-block;
   min-width: 50px;
 }
+.favs{
 
+
+}
+.wl{
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
 .df {
   display: flex;
   margin-bottom: 15px;
@@ -134,3 +154,4 @@ code {
   margin: auto;
   border: 2px solid red;
 }
+
