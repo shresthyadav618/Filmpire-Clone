@@ -3,6 +3,8 @@ import logo from "./movielogo.jpeg";
 
 import "./index.css";
 import advent from "./advent.png";
+import firestore from "./firestore"
+import { getDocs,onSnapshot,collection } from "firebase/firestore";
 import animation from "./animation.png";
 import comedy from "./comedy.png";
 import crime from "./crime.png";
@@ -11,24 +13,72 @@ import drama from "./drama.png";
 import family from "./family.png";
 import horror from "./horror.png";
 import fiction from "./fiction.png";
-
+import a2f from "./a2f.jpeg"
 import Links from "./links";
 import Child from "./Child";
-
+import {Routes, Route, Link} from "react-router-dom"
 import action from "./action.png";
+import Favss from "./favss"
 export default function useSider() {
+  const colref=collection(firestore,'movies')
+
+const [gci,gcc]=useState(false)  // gcc -> grand child change , gci -> grand child initial
+
+function maingcc(){
+  gcc((prev)=>{
+    return !prev
+  })
+  // console.log("lund lele")
+}
+
   const [urlUsed, ChangeUrl] = React.useState();
+  const [favs,changefav]=useState([])
+useEffect(()=>{
+let arr=[];
+getDocs(colref).then((snap)=>{
+  snap.docs.forEach((doc)=>{
+arr.push({movieid:doc.data().movieid, docid: doc.id });    
+// console.log(doc.data())
+  })
+})
+changefav(arr);
+},[gci])
+
+onSnapshot(colref,((snap)=>{
+  let arr=[];
+  snap.docs.forEach((doc)=>{
+    arr.push(<div>{doc.data().moviedata}</div>)
+  });
+  // changefav(arr)
+}))
+
+
+// ho kya rha hai yhpar -> add2fav kra fir vo kya krega hmari firebase docs mai add kreaga data , par uske changes dejhne k liye 
+// onSnapshot use hoga , aur agr onsnapshot mai state change kre to infinite loop bn jayga 
+
 
   console.log(Links);
   console.log(urlUsed);
   console.log(Links.toprated);
 
+const [fav,tgl]=useState(false);
+
+
+
   return (
     <>
       <div className="flex">
         <div className="sider cursor-pointer">
+
+
+
           <div className="w-fit block m-auto">
             <img src={logo} alt="not found" width={"100px"}></img>
+          </div>
+<div className="br"></div>
+          <div className="flex justify-center items-center text-lg" onClick={()=>{tgl((prev)=>!prev)}}>
+          <Link to="/fav"><p>Your favourites</p></Link>
+            <img src={a2f} width="20px" className="ml-2"></img>
           </div>
 
           <div className="br"></div>
@@ -213,11 +263,21 @@ export default function useSider() {
 
         <div className="bgc"></div>
         <div>
+        <Routes>
+  <Route path="/fav" element={<Favss fav={favs} Gcc={maingcc}/>}>
+ 
+  </Route>
+</Routes>
+    <br></br>
+   <div className="wl"></div>
           <Child
             GetUrl={urlUsed === undefined ? Links.popular : urlUsed.url}
             Check={urlUsed === undefined ? true : urlUsed.check}
+            Gcc={maingcc}
           />
         </div>
+
+
       </div>
     </>
   );
