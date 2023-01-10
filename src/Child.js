@@ -35,6 +35,7 @@ export default function useFetchh(props) {
           MovieDesc={elm.overview}
           Adult={elm.adult}
           Lang={elm.original_language}
+          Gcc={props.Gcc}
         />
       </div>
     );
@@ -66,7 +67,4 @@ export default function useFetchh(props) {
     </div>
   );
 }
-
-
-
 
