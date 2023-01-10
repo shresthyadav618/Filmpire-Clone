@@ -1,6 +1,7 @@
 
 import React,{useEffect, useState}from "react"
 import Star from "./Star"
+import firebase from 'firebase/compat/app'
 import a2f from "./a2f.jpeg"
 import ParPota from "./ParPota"
 import firestore from "./firestore"
